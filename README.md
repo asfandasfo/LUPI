@@ -29,9 +29,9 @@ labels.csv: This file contain labels (-1,1) for each patient. -1 represent chemo
 NOTE: gene.csv and labels.csv files have data in same sequence as imgs.csv file have patient ID’s which will be used later for training. Also change the local path to tiles directory in imgs.csv file as needed.
 
 
-So by now you will have all data required to train and validate the models. Each model will use ‘imgs.py’, ‘genes.py’ and ‘labels.py’ file to load the data so make sure you update the local paths in ‘imgs.py’ file.
+So by now you will have all data required to train and validate the models. Each model will use the ‘imgs.csv’, ‘genes.csv’, ‘labels.csv’ and 'loader.py' files to load the data and 'patch_extractor.py' to extract patches from tiles, so make sure you update the local paths in ‘imgs.csv’ file.
 
-To train the model simply execute the model file e.g. privileged_model.py and also one can use the ‘testing.py’ file to use the already trained model.
+To train the model simply execute the model file e.g. privileged_model.py which will load the genes profiles of each patient from 'genes.csv'and labels from 'labels.csv' for training and validation of privileged space model. Also one can use the ‘testing.py’ file to use the already input and lupi trained model.
 
 
 
