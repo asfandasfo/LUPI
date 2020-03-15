@@ -23,7 +23,9 @@ After above two steps one will have normalized top three tiles for each patient.
   III.	labels.csv
 
 imgs.csv: This file contains path to tiles for each patient used in this project and which need to be updated as per your local path.
+
 gene.csv: In this file each column represent patient’s gene profile, which is already preprocessed as discussed in paper.
+
 labels.csv: This file contain labels (-1,1) for each patient. -1 represent chemo-resistant and +1 represent chemo-sensitive patients
 
 NOTE: gene.csv and labels.csv files have data in same sequence as imgs.csv file have patient ID’s which will be used later for training. Also change the local path to tiles directory in imgs.csv file as needed.
