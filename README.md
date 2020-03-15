@@ -10,9 +10,11 @@ To train and validate the models one would need tiles extracted from WSIs, gene 
 
 Before executing ‘slide.py’ file, add path to WSIs directory and the directory where you want to save the tiles on line 32,143 and 751. This file will create low resolution image of each whole slide image. No changes required in ‘filter.py’ file. In file ‘tiles.py’ change the size of tile to 1536x2048 and top tiles to 3 on line 38, 39 and 40 respectively. After this modification code can be executed to generate top 3 tiles from each WSI. Slide.py->filter.py->tiles.py
 
-After preprocessing step one will have top 3 tiles for each patient. Add these tiles path to ‘imgs.csv file’.
+**2-Stain normalization:** Tiles extracted from WSIs needed to be stain normalized to remove the color variations. To do that update the local paths in ‘normalization.py’ and execute it.
 
-**2-data_files:** This folder contain following three files:
+After above two steps one will have normalized top three tiles for each patient. Add these tiles path to ‘imgs.csv file’.
+
+**3-data_files:** This folder contain following three files:
 
   I.	imgs.csv 
   
@@ -26,7 +28,6 @@ labels.csv: This file contain labels (-1,1) for each patient. -1 represent chemo
 
 NOTE: gene.csv and labels.csv files have data in same sequence as imgs.csv file have patient ID’s which will be used later for training. Also change the local path to tiles directory in imgs.csv file as needed.
 
-**3-Stain normalization:** Tiles extracted from WSIs needed to be stain normalized to remove the color variations. To do that update the local paths in ‘normalization.py’ and execute it.
 
 So by now you will have all data required to train and validate the models. Each model will use ‘imgs.py’, ‘genes.py’ and ‘labels.py’ file to load the data so make sure you update the local paths in ‘imgs.py’ file.
 
