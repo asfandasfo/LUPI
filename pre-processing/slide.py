@@ -30,7 +30,7 @@ import sys
 import util
 from util import Time
 MODE='Sensitive'
-BASE_DIR = os.path.join("/home/fayyaz/Desktop/AsfandYaar/FYP_AsfandYaar/Image_data/TS2_data/onet", MODE)
+BASE_DIR = os.path.join("/home/fayyaz/Desktop/AsfandYaar/FYP_AsfandYaar/Image_data/TS1_data/onet", MODE)
 # BASE_DIR = os.path.join(os.sep, "Volumes", "BigData", "TUPAC")
 TRAIN_PREFIX = ""
 SRC_TRAIN_DIR = os.path.join(BASE_DIR, "training_slides")
